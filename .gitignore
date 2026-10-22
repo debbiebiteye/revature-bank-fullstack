@@ -1,0 +1,28 @@
+# Build artifacts and dependencies
+**/node_modules/
+**/dist/
+**/target/
+**/.angular/
+**/coverage/
+# Local IDE settings
+.idea/
+**/.idea/
+**/.vscode/
+*.iml
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+**/application-local.properties
+**/application-local.yml
+*.pem
+*.key
+*.p12
+*.jks
+# Scratch, backups and logs
+*.before-overrides
+*.log
+*.dump
+*.backup
+.DS_Store
+Thumbs.db

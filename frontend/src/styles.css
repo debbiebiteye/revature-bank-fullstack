@@ -1,0 +1,9 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+body {
+  margin: 0;
+  background-color: #f3f6fa;
+  color: #203047;
+  font-family: Arial, sans-serif;
+}
+/*These are global styles, shared across the application.*/

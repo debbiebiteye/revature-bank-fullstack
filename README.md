@@ -124,3 +124,4 @@ Future work includes automated integration/concurrency tests, transaction histor
 The Angular development proxy is not a production deployment configuration. Do not expose the development servers or use real financial data.
 
 This repository was developed with AI-assisted explanations and implementation guidance as a learning project. Learner comments are deliberately preserved.
+

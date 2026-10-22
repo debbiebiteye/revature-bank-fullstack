@@ -1,0 +1,90 @@
+<section class="container pb-5">
+  <div class="card shadow-sm login-card">
+    <div class="card-body p-4">
+      <h2>Member Login</h2>
+      <p class="text-secondary">
+        Sign in to manage your accounts.
+      </p>
+
+      @if (successMessage()) {
+        <div class="alert alert-success" role="status">
+          {{ successMessage() }}
+        </div>
+      }
+
+      @if (errorMessage()) {
+        <div class="alert alert-danger" role="alert">
+          {{ errorMessage() }}
+        </div>
+      }
+
+      <form [formGroup]="loginForm"
+            (ngSubmit)="onSubmit()"
+            novalidate>
+
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+
+          <input
+            id="username"
+            type="text"
+            class="form-control"
+            formControlName="username"
+            autocomplete="username"
+            aria-describedby="username-error"
+          />
+
+          @if (loginForm.controls.username.touched &&
+          loginForm.controls.username.invalid) {
+            <p id="username-error" class="text-danger small mt-1">
+              Username is required.
+            </p>
+          }
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+
+          <input
+            id="password"
+            type="password"
+            class="form-control"
+            formControlName="password"
+            autocomplete="current-password"
+            aria-describedby="password-error"
+          />
+
+          @if (loginForm.controls.password.touched &&
+          loginForm.controls.password.invalid) {
+            <p id="password-error" class="text-danger small mt-1">
+              Password is required.
+            </p>
+          }
+        </div>
+
+        <button
+          type="submit"
+          class="btn btn-primary w-100"
+          [disabled]="submitting()"
+        >
+          {{ submitting() ? 'Signing in…' : 'Sign in' }}
+        </button>
+      </form>
+      <p class="mt-3 mb-0">
+        New to Biteye Trust Bank?
+        <a routerLink="/register">Create your login</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!--The Angular connections are:
+Syntax	Purpose
+[formGroup]="loginForm"	Connects the HTML form to your TypeScript FormGroup
+formControlName="username"	Connects that input to the username control
+(ngSubmit)="onSubmit()"	Calls your method when the form is submitted
+if (...)	Displays an error only when its condition is true
+
+
+type="password" hides the typed characters. It doesn’t hash the password; the
+backend handles hashing.-->

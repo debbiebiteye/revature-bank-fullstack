@@ -1,0 +1,26 @@
+<main class="container py-5">
+  <section class="card shadow-sm bank-card">
+    <div class="card-body p-4">
+      <h1 class="bank-title">{{ title() }}</h1>
+
+      <p class="text-secondary mb-0">
+        Welcome to your banking dashboard.
+      </p>
+    </div>
+  </section>
+</main>
+
+<router-outlet></router-outlet>
+
+<!--The Bootstrap classes provide:
+- container: responsive width and horizontal spacing.
+- py-5: vertical padding.
+- card / card-body: a bordered panel and its content area.
+- shadow-sm: a small shadow.
+- p-4: padding on all sides.
+- text-primary / text-secondary: theme colors.
+- mb-0: removes the bottom margin.
+
+Save and check the page. Bootstrap handles
+the card and spacing; your CSS adds the background,
+narrower width, and green bank styling.-->

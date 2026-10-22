@@ -1,0 +1,10 @@
+.bank-card {
+  max-width: 720px;
+  margin: 0 auto;
+  border-top: 5px solid #145c46;
+}
+
+.bank-title {
+  color: #145c46;
+}
+/*These styles belong to the root component.*/
